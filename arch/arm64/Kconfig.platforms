@@ -287,6 +287,27 @@ config SOC_EXYNOS9610
 	select PINCTRL
 	select SAMSUNG_DMADEV
 
+choice
+	prompt "Exynos 9611 device target"
+	default EXYNOS9611_A51
+
+config EXYNOS9611_A51
+	bool "Samsung Galaxy A51"
+
+config EXYNOS9611_F41
+	bool "Samsung Galaxy F41"
+
+config EXYNOS9611_M21
+	bool "Samsung Galaxy M21"
+
+config EXYNOS9611_M31
+	bool "Samsung Galaxy M31"
+
+config EXYNOS9611_M31S
+	bool "Samsung Galaxy M31s"
+
+endchoice
+
 config ARCH_EXYNOS9
 	bool "ARMv8 based Samsung Exynos9"
 	select HAVE_ARM_SCU if SMP
